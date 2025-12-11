@@ -1,0 +1,8 @@
+## Interface: 110002
+## Title: Personal Resource Anchor
+## Notes: Anchors EssentialCooldownViewer and UtilityCooldownViewer to the Personal Resource Display
+## Author: MrStrugglez
+## Version: 1.0.0
+## SavedVariables: PersonalResourceAnchorDB
+
+PersonalResourceAnchor.lua
