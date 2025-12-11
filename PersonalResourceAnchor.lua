@@ -9,11 +9,15 @@ local frame = CreateFrame("Frame")
 -- Function to anchor the cooldown viewers to the Personal Resource Display
 local function AnchorCooldownViewers()
     -- Get the Personal Resource Display (NamePlate1)
-    local personalResourceDisplay = NamePlateDriverFrame and NamePlateDriverFrame.namePlateFrameBase or C_NamePlate.GetNamePlateForUnit("player")
+    -- Try multiple methods to get the Personal Resource Display
+    local personalResourceDisplay = _G["NamePlate1"]
     
-    -- Alternative method to get Personal Resource Display
+    -- Fallback: Try to get it from the player's nameplate
     if not personalResourceDisplay then
-        personalResourceDisplay = _G["NamePlate1"]
+        local playerNameplate = C_NamePlate.GetNamePlateForUnit("player")
+        if playerNameplate and playerNameplate.UnitFrame then
+            personalResourceDisplay = playerNameplate.UnitFrame
+        end
     end
     
     -- Get the cooldown viewer frames
@@ -68,15 +72,14 @@ frame:SetScript("OnEvent", OnEvent)
 
 -- Provide a slash command to manually re-anchor if needed
 SLASH_PERSONALRESOURCEANCHOR1 = "/pra"
-SLASH_PERSONALRESOURCEANCHOR2 = "/personalresourceanchor"
 SlashCmdList["PERSONALRESOURCEANCHOR"] = function(msg)
     if msg == "anchor" or msg == "" then
         AnchorCooldownViewers()
         print("|cFF00FF00Personal Resource Anchor:|r Manual anchoring executed")
     elseif msg == "help" then
         print("|cFF00FF00Personal Resource Anchor Commands:|r")
-        print("/pra or /pra anchor - Manually re-anchor cooldown viewers")
-        print("/pra help - Show this help message")
+        print("  /pra or /pra anchor - Manually re-anchor cooldown viewers")
+        print("  /pra help - Show this help message")
     else
         print("|cFFFF0000Personal Resource Anchor:|r Unknown command. Type '/pra help' for help")
     end
