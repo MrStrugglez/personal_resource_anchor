@@ -1,0 +1,18 @@
+## Interface: 110207
+## Title: Personal Resource Anchor
+## Notes: Anchors Cooldown Manager bars to the Personal Resource Display
+## Author: MrStruggles
+## Version: 1.0.0
+## SavedVariables: PersonalResourceAnchorDB
+
+## Load the Libraries
+Libs\LibStub\LibStub.lua
+Libs\AceDB-3.0\AceDB-3.0.lua
+Libs\AceConfig-3.0\AceConfig-3.0.lua
+Libs\AceConfigDialog-3.0\AceConfigDialog-3.0.lua
+Libs\AceGUI-3.0\AceGUI-3.0.lua 
+Libs\AceGUI-3.0-Blizzard\AceGUI-3.0-Blizzard.lua
+Libs\LibEditModeOverride.lua
+
+Options.lua
+PersonalResourceAnchor.lua
