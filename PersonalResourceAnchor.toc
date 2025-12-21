@@ -6,13 +6,32 @@
 ## SavedVariables: PersonalResourceAnchorDB
 
 ## Load the Libraries
+#@no-lib-strip@
 Libs\LibStub\LibStub.lua
-Libs\AceDB-3.0\AceDB-3.0.lua
-Libs\AceConfig-3.0\AceConfig-3.0.lua
-Libs\AceConfigDialog-3.0\AceConfigDialog-3.0.lua
-Libs\AceGUI-3.0\AceGUI-3.0.lua 
-Libs\AceGUI-3.0-Blizzard\AceGUI-3.0-Blizzard.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
 Libs\LibEditModeOverride.lua
+#@end-no-lib-strip@
+
+Init\Enums.lua
+Init\Defaults.lua
+Init\Addons.lua
+
+Frames\AceConfigPresets.lua
+Mixins\FrameControllerMixin.lua
+Controllers\GameSettingsController.lua
+Frames\EssentialCooldownController.lua
+Frames\UtilityCooldownController.lua
+Controllers\FrameController.lua
 
 Options.lua
+
 PersonalResourceAnchor.lua
+

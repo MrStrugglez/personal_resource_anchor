@@ -45,6 +45,14 @@
         "SetDesaturation",
         "ColorPickerFrame",
         "OKAY",
-        "NOT_BOUND"
+        "NOT_BOUND",
+        "class",
+        "ReloadUI",
+        "Settings",
+        "ChatEdit_InsertLink",
+        "ChatFrameUtil"
+    ],
+    "Lua.diagnostics.disable": [
+        "assign-type-mismatch"
     ]
 }

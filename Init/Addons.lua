@@ -1,0 +1,6 @@
+AceAddon:NewAddon(Enum.Addons.GameSettingsController)
+AceAddon:NewAddon(Enum.Addons.EssentialCooldownController)
+AceAddon:NewAddon(Enum.Addons.UtilityCooldownController)
+AceAddon:NewAddon(Enum.Addons.AceConfigPreset)
+AceAddon:NewAddon(Enum.Addons.FrameController)
+AceAddon:NewAddon(Enum.Addons.PersonalResourceDisplayAnchor, "AceEvent-3.0")
