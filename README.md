@@ -20,15 +20,9 @@ The anchoring uses center-bottom to center-top alignment with appropriate spacin
 
 The addon works automatically on login. The cooldown viewers will be anchored to the Personal Resource Display once all frames are loaded.
 
-### Commands
-
-- `/pra` or `/pra anchor` - Manually re-anchor the cooldown viewers
-- `/pra help` - Display help information
-
 ## Features
 
 - Automatic anchoring on player login
-- Manual re-anchoring via slash commands
 - Informative console messages for debugging
 - Fallback positioning if frames are not found
 

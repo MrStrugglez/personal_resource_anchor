@@ -70,19 +70,4 @@ end
 frame:RegisterEvent("PLAYER_LOGIN")
 frame:SetScript("OnEvent", OnEvent)
 
--- Provide a slash command to manually re-anchor if needed
-SLASH_PERSONALRESOURCEANCHOR1 = "/pra"
-SlashCmdList["PERSONALRESOURCEANCHOR"] = function(msg)
-    if msg == "anchor" or msg == "" then
-        AnchorCooldownViewers()
-        print("|cFF00FF00Personal Resource Anchor:|r Manual anchoring executed")
-    elseif msg == "help" then
-        print("|cFF00FF00Personal Resource Anchor Commands:|r")
-        print("  /pra or /pra anchor - Manually re-anchor cooldown viewers")
-        print("  /pra help - Show this help message")
-    else
-        print("|cFFFF0000Personal Resource Anchor:|r Unknown command. Type '/pra help' for help")
-    end
-end
-
-print("|cFF00FF00Personal Resource Anchor|r loaded. Type /pra help for commands.")
+print("|cFF00FF00Personal Resource Anchor|r loaded.")
